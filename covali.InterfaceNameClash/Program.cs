@@ -6,11 +6,14 @@ Octagon oct = new();
 IDrawToForm itfForm = (IDrawToForm)oct;
 itfForm.Draw();
 
-IDrawToMemory itfMemory = (IDrawToMemory)oct;
-itfMemory.Draw();
+//IDrawToMemory itfMemory = (IDrawToMemory)oct;
+//itfMemory.Draw();
+((IDrawToMemory)oct).Draw();
 
-IDrawToPrinter itfPrinter = (IDrawToPrinter)oct;
-itfPrinter.Draw();
+//IDrawToPrinter itfPrinter = (IDrawToPrinter)oct;
+//itfPrinter.Draw();
+if (oct is IDrawToPrinter dtm)
+    dtm.Draw();
 
 
 
